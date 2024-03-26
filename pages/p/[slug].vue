@@ -5,6 +5,32 @@ const { data: post } = await useAsyncData('post_data_' + slug, () => queryConten
 if (post && post.value && post.value.title) {
   useHead({
     title: post.value.title,
+    meta: [
+      {
+        name: 'description',
+        content: post.value.title,
+      },
+      {
+        name: 'keywords',
+        content: post.value.tags,
+      },
+      {
+        name: 'author',
+        content: post.value.author,
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1.0'
+      },
+      {
+        name: 'content-type',
+        content: 'text/html; charset=utf-8'
+      },
+      {
+        name: 'language',
+        content: 'Portuguese'
+      }
+    ]
   });
 }
 </script>
