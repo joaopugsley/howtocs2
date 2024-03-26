@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "HOWTOCS2 - BLOG",
+  title: "HOWTOCS2.com / Seu portal de notícias sobre o Counter Strike brasileiro.",
 });
 </script>
 
