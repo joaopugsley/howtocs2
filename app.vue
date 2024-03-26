@@ -1,0 +1,58 @@
+<template>
+  <Navbar/>
+  <main class="w-full bg-zinc-900 min-h-screen h-fit flex flex-col space-y-8 items-center p-4 sm:p-8 pt-28 sm:pt-36 pb-8 sm:pb-24">
+    <NuxtPage/>
+  </main>
+  <Footer/>
+</template>
+
+<style lang="css">
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(9, 9, 11);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(99, 102, 241);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(129, 140, 248);
+  }
+
+</style>
