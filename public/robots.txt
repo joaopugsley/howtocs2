@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://howtocs2.com/sitemap.xml
