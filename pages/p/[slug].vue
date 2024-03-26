@@ -1,6 +1,12 @@
 <script setup lang="js">
 const { slug } = useRoute().params;
 const { data: post } = await useAsyncData('post_data_' + slug, () => queryContent('posts').where({ draft: false, slug: slug }).findOne());
+
+if (post && post.value && post.value.title) {
+  useHead({
+    title: post.value.title,
+  });
+}
 </script>
 
 <template>
