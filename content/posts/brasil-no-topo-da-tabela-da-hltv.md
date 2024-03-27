@@ -18,7 +18,7 @@ Tabela com as posições atualizadas dos brasileiros no top 30 do ranking da HLT
 | Organização   | Antiga Posição   | Nova Posição     |
 |---------------|------------------|------------------|
 | FURIA         | 16º              | 13º              |
-| Imperial      | 26º              | 22º              |
 | paiN          | 31º              | 20º              |
-| Legacy        | 30º              | 27º              |
+| Imperial      | 26º              | 22º              |
 | MIBR          | 24º              | 26º              |
+| Legacy        | 30º              | 27º              |
