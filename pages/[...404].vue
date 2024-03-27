@@ -1,3 +1,9 @@
+<script setup lang="js">
+  useHead({
+    title: "HOWTOCS2.com / Página não encontrada.",
+  });
+</script>
+
 <template>
   <div 
     class="w-full lg:w-3/5 flex flex-col space-y-2 justify-center items-center"
