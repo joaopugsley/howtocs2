@@ -10,13 +10,28 @@ if (post && post.value && post.value.title) {
   });
   useSeoMeta({
     title: post.value.title,
-    ogTitle: post.value.title,
     description: post.value.description,
-    ogDescription: post.value.description,
-    ogImage: 'https://howtocs2.com' + post.value.thumbnail,
     author: post.value.author,
     viewport: 'width=devide-width, initial-scale=1.0',
-    ogLocale: 'pt-br',
+    keywords: post.value.tags,
+    ogTitle: post.value.title,
+    ogDescription: post.value.description,
+    ogImage: 'https://howtocs2.com' + post.value.thumbnail,
+    ogImageAlt: post.value.title,
+    ogUrl: 'https://howtocs2.com/p/' + post.value.slug,
+    ogSiteName: 'HOWTOCS2',
+    ogLocale: 'pt_BR',
+    ogType: 'article',
+    twitterCard: 'summary_large_image',
+    twitterSite: '@howtocs2',
+    twitterTitle: post.value.title,
+    twitterDescription: post.value.description,
+    twitterImageAlt: post.value.title,
+    twitterImage: 'https://howtocs2.com' + post.value.thumbnail,
+    articleAuthor: post.value.author,
+    articleSection: 'esports',
+    articlePublishedTime: post.value.date,
+    articleTag: post.value.tags,
   })
 }
 </script>
