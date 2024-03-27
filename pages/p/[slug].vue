@@ -60,6 +60,7 @@ if (post && post.value && post.value.title) {
         </span>
       </div>
     </div>
+    <ReadAlso :slug="slug"></ReadAlso>
   </article>
   <div 
     v-else
