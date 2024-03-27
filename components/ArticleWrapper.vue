@@ -24,7 +24,7 @@ const { data: posts } = await useAsyncData('posts_data', () => queryContent('pos
         </div>
         <div class="p-4">
           <h2 class="text-lg font-semibold">{{ post.title }}</h2>
-          <ContentRenderer :value="post" class="line-clamp-2 text-gray-200"/>
+          <p class="line-clamp-2 text-gray-200">{{ post.description }}</p>
         </div>
       </article>
     </div>
