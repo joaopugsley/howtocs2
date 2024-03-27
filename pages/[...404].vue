@@ -1,6 +1,9 @@
 <script setup lang="js">
   useHead({
     title: "HOWTOCS2.com / Página não encontrada.",
+    htmlAttrs: {
+      lang: 'pt-br',
+    },
   });
 </script>
 
