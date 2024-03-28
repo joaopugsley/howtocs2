@@ -45,7 +45,7 @@ if (post && post.value && post.value.title) {
       <Image :src="post.thumbnail" :alt="post.title"/>
       <div class="absolute right-2 bottom-2 flex flex-row justify-center items-center space-x-2">
         <span v-if="post.author" class="text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold select-all"><span class="select-none">Escrito por: </span>{{ post.author }}</span>
-        <span v-if="post.date" class="text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ new Date(post.date).toLocaleDateString() }}</span>
+        <span v-if="post.date" class="text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ new Date(post.date).toLocaleDateString("pt-br", { timeZone: "UTC" }) }}</span>
       </div>
     </div>
     <h1 class="text-xl sm:text-2xl lg:text-5xl text-white font-bold">{{ post.title }}</h1>

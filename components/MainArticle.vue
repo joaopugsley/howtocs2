@@ -16,7 +16,7 @@ const { data: last_post } = await useAsyncData('last_post_data', () => queryCont
   >
     <div class="relative w-full max-h-96 overflow-hidden">
       <Image :src="last_post.thumbnail" :alt="last_post.title" :colored="false" class="group-hover:scale-105 transition-all duration-300"/>
-      <span class="absolute right-2 bottom-2 text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ new Date(last_post.date).toLocaleDateString() }}</span>
+      <span class="absolute right-2 bottom-2 text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ new Date(last_post.date).toLocaleDateString("pt-br", { timeZone: "UTC" }) }}</span>
     </div>
     <div class="w-full p-4 space-y-2">
       <NuxtLink :to="'/p/' + last_post.slug" class="text-2xl font-bold text-white">{{ last_post.title }}</NuxtLink>
