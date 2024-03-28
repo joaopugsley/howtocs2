@@ -15,7 +15,7 @@ const { data: posts } = await useAsyncData('posts_data', () => queryContent('pos
       <article
         v-for="post in posts"
         :key="post._path"
-        @click="redirectToArticle(post.slug)"
+        @click.exact="redirectToArticle(post.slug)"
         class="group select-none w-full bg-zinc-800 rounded-lg overflow-hidden transition-all duration-1000 hover:bg-gradient-to-tr hover:from-indigo-500/20 hover:via-zinc-800 hover:to-zinc-800 drop-shadow-sm"
       >
         <div class="relative w-full max-h-40 overflow-hidden">

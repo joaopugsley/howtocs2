@@ -11,7 +11,7 @@ const { data: last_post } = await useAsyncData('last_post_data', () => queryCont
 <template>
   <article 
     v-if="last_post" 
-    @click="redirectToArticle(last_post.slug)" 
+    @click.exact="redirectToArticle(last_post.slug)" 
     class="group select-none w-full h-fit bg-zinc-800 rounded-lg overflow-hidden transition-all duration-150 hover:bg-gradient-to-tr hover:from-indigo-500/20 hover:via-zinc-800 hover:to-zinc-800 drop-shadow-sm"
   >
     <div class="relative w-full max-h-96 overflow-hidden">
