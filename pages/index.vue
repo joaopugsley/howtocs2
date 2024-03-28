@@ -22,10 +22,6 @@ useHead({
       content: 'width=device-width, initial-scale=1.0'
     },
     {
-      name: 'content-type',
-      content: 'text/html; charset=utf-8'
-    },
-    {
       name: 'language',
       content: 'Portuguese'
     }
