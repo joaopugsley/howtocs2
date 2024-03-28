@@ -15,6 +15,13 @@ export default defineEventHandler(async (event) => {
     lastmod: new Date().toISOString()
   })
 
+  // write archive page
+  sitemap.write({
+    url: '/archive',
+    changefreq: 'daily',
+    lastmod: new Date().toISOString()
+  })
+
   // write posts pages
   for (const post of posts) {
     sitemap.write({
