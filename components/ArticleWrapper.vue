@@ -7,7 +7,13 @@ const redirectToArticle = (slug: string) => {
   router.push("/p/" + slug);
 }
 
-const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1 }).skip(1).limit(6).find());
+const maxRecentlyPosts = 6;
+
+const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1 }).skip(1).limit(maxRecentlyPosts).find());
+
+const showArchiveButton = () => {
+  return posts.value?.length === maxRecentlyPosts;
+}
 </script>
 
 <template>
@@ -29,6 +35,11 @@ const { data: posts } = await useAsyncData('posts_data', () => queryContent('pos
           <p class="line-clamp-2 text-gray-200">{{ post.description }}</p>
         </div>
       </article>
+    </div>
+    <div v-if="showArchiveButton()" class="w-full flex flex-row-reverse">
+      <NuxtLink to="/archive" class="px-3 py-1 rounded-md bg-zinc-800 hover:bg-zinc-850 text-md font-bold text-white select-none">
+        Ver mais
+      </NuxtLink>
     </div>
   </div>
 </template>
