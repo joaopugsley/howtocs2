@@ -23,7 +23,7 @@ const { data: posts } = await useAsyncData('posts_data', () => queryContent('pos
           <span class="absolute right-2 bottom-2 text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ new Date(post.date).toLocaleDateString() }}</span>
         </div>
         <div class="p-4">
-          <h2 class="text-lg font-semibold">{{ post.title }}</h2>
+          <NuxtLink :to="'/p/' + post.slug" class="text-lg font-semibold">{{ post.title }}</NuxtLink>
           <p class="line-clamp-2 text-gray-200">{{ post.description }}</p>
         </div>
       </article>

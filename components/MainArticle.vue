@@ -19,7 +19,7 @@ const { data: last_post } = await useAsyncData('last_post_data', () => queryCont
       <span class="absolute right-2 bottom-2 text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ new Date(last_post.date).toLocaleDateString() }}</span>
     </div>
     <div class="w-full p-4 space-y-2">
-      <h1 class="text-2xl font-bold text-white">{{ last_post.title }}</h1>
+      <NuxtLink :to="'/p/' + last_post.slug" class="text-2xl font-bold text-white">{{ last_post.title }}</NuxtLink>
       <p class="prose prose-invert max-w-full line-clamp-2">{{ last_post.description }}</p>
       <div class="mt-1 flex flex-row space-x-2">
         <span v-for="tag in last_post.tags" :key="tag" class="text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-sm group-hover:bg-zinc-800 group-hover:text-indigo-300">
