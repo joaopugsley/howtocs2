@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import formatPostDate from '~/utils/format-post-date';
+
 const router = useRouter();
 
 const redirectToArticle = (slug: string) => {
@@ -20,7 +22,7 @@ const { data: posts } = await useAsyncData('posts_data', () => queryContent('pos
       >
         <div class="relative w-full max-h-40 overflow-hidden">
           <Image :src="post.thumbnail" :alt="post.title" :colored="false" class="group-hover:scale-105 transition-all duration-300"/>
-          <span class="absolute right-2 bottom-2 text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ new Date(post.date).toLocaleDateString("pt-br", { timeZone: "UTC" }) }}</span>
+          <span class="absolute right-2 bottom-2 text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ formatPostDate(post.date) }}</span>
         </div>
         <div class="p-4">
           <NuxtLink :to="'/p/' + post.slug" class="text-lg font-semibold">{{ post.title }}</NuxtLink>
