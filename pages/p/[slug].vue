@@ -5,16 +5,27 @@ const { slug } = useRoute().params;
 const { data: post } = await useAsyncData('post_data_' + slug, () => queryContent('posts').where({ draft: false, slug: slug }).findOne());
 
 if (post && post.value && post.value.title) {
+
+  const jsonld = {"@context": "https://schema.org", "@graph": [{  "@type": "Article",  "@id": "https://howtocs2.com/p/" + post.value.slug,  "isPartOf": {    "@id": "https://howtocs2.com/p/" + post.value.slug,  },  "author": {    "name": post.value.author,    "@id": "https://howtocs2.com/author/" + post.value.author,  },  "headline": post.value.title,  "datePublished": new Date(post.value.date).toISOString(),  "dateModified": new Date(post.value.date).toISOString(),  "mainEntityOfPage": {    "@id": "https://howtocs2.com/p/" + post.value.slug,  },  "publisher": {    "@id": "https://howtocs2.com/"  },  "image": {    "@id": "https://howtocs2.com" + post.value.thumbnail,  },  "thumbnailUrl": "https://howtocs2.com" + post.value.thumbnail,  "articleSection": [    "Esports",    "Notícias"  ],  "inLanguage": "pt-BR"},{  "@type": "WebPage",  "@id": "https://howtocs2.com/p/" + post.value.slug,  "url": "https://howtocs2.com/p/" + post.value.slug,  "name": post.value.title,  "isPartOf": {    "@id": "https://howtocs2.com/p/" + post.value.slug,  },  "primaryImageOfPage": {    "@id": "https://howtocs2.com" + post.value.thumbnail,  },  "image": {    "@id": "https://howtocs2.com" + post.value.thumbnail,  },  "thumbnailUrl": "https://howtocs2.com" + post.value.thumbnail,  "datePublished": new Date(post.value.date).toISOString(),  "dateModified": new Date(post.value.date).toISOString(),  "description": post.value.description,  "breadcrumb": {    "@id": "https://howtocs2.com/p/" + post.value.slug,  },  "inLanguage": "pt-BR",  "potentialAction": [    {      "@type": "ReadAction",      "target": [        "https://howtocs2.com/p/" + post.value.slug,      ]    }  ]},{  "@type": "ImageObject",  "inLanguage": "pt-BR",  "@id": "https://howtocs2.com/p/" + post.value.slug,  "url": "https://howtocs2.com" + post.value.thumbnail,  "contentUrl": "https://howtocs2.com" + post.value.thumbnail,  "width": 1920,  "height": 1080,},{  "@type": "BreadcrumbList",  "@id": "https://howtocs2.com/p/" + post.value.slug,  "itemListElement": [    {      "@type": "ListItem",      "position": 1,      "name": "Home",      "item": "https://howtocs2.com/"    },    {      "@type": "ListItem",      "position": 2,      "name": "https://howtocs2.com/p/" + post.value.slug,    }  ]},{  "@type": "WebSite",  "@id": "https://howtocs2.com/",  "url": "https://howtocs2.com/",  "name": "HOWTOCS2",  "description": "Seu portal de notícias sobre o Counter Strike brasileiro. Fique por dentro das últimas novidades, análises, eventos e muito mais.",  "publisher": {    "@id": "https://howtocs2.com/"  },  "inLanguage": "pt-BR"},{  "@type": "Organization",  "@id": "https://howtocs2.com/",  "name": "HOWTOCS2",  "url": "https://howtocs2.com/",  "sameAs": [    "https://twitter.com/howtocs2"  ]}]};
+
   useHead({
     htmlAttrs: {
       lang: 'pt-br',
     },
+    script: [
+      {
+        hid: "article-json-ld",
+        type: "application/ld+json",
+        textContent: JSON.stringify(jsonld)
+      }
+    ]
   });
+
   useSeoMeta({
     title: post.value.title,
     description: post.value.description,
     author: post.value.author,
-    viewport: 'width=devide-width, initial-scale=1.0',
+    viewport: 'width=device-width, initial-scale=1.0',
     keywords: post.value.tags,
     ogTitle: post.value.title,
     ogDescription: post.value.description,
@@ -35,6 +46,7 @@ if (post && post.value && post.value.title) {
     articlePublishedTime: post.value.date,
     articleTag: post.value.tags,
   })
+
 }
 </script>
 
