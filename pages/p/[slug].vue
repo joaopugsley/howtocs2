@@ -51,7 +51,9 @@ if (post && post.value && post.value.title) {
       </div>
     </div>
     <h1 class="text-xl sm:text-2xl lg:text-5xl text-white font-bold">{{ post.title }}</h1>
-    <div class="prose prose-invert prose-lg max-w-full w-full prose-strong:text-indigo-500 prose-a:text-indigo-500 prose-a:underline prose-hr:border-zinc-800">
+    <div 
+      class="prose prose-invert prose-lg max-w-full w-full prose-strong:text-indigo-100 prose-a:text-indigo-500 prose-a:underline prose-hr:border-zinc-800 prose-h1:text-2xl"
+    >
       <ContentRenderer :value="post"/>
     </div>
     <div class="w-full border-t border-zinc-800 py-2">
