@@ -30,7 +30,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-width: 320px;
-    min-height: 100vh;
   }
 
   ::-webkit-scrollbar {
