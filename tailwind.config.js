@@ -7,6 +7,9 @@ export default {
         zinc: {
           850: "#202023"
         }
+      },
+      screens: {
+        'xs': '540px',
       }
     },
   },
