@@ -5,6 +5,7 @@ date: 2024-03-26
 draft: false
 tags: ["Boltz"]
 thumbnail: "/img/boltz-imperial.jpg"
+thumbnail_alt: "Reprodução/HLTV"
 slug: boltz-anuncia-retorno-ao-competitivo
 id: 3
 ---

@@ -5,6 +5,7 @@ date: 2024-03-30
 draft: false
 tags: ["NAVI", "G2", "FaZe", "Vitality", "Major", "Finais", "S1mple"]
 thumbnail: "/img/navi-major-copenhagen.webp"
+thumbnail_alt: "Reprodução/HLTV"
 slug: navi-vence-g2-e-se-classifica-para-finais-do-primeiro-major-de-cs2
 id: 7
 ---
