@@ -1,6 +1,6 @@
 <template>
   <Navbar/>
-  <main class="w-full bg-zinc-900 min-h-screen h-fit flex flex-col space-y-8 items-center p-4 sm:p-8 pt-28 sm:pt-36 pb-8 sm:pb-24">
+  <main class="w-full bg-zinc-900 h-fit flex flex-col space-y-8 items-center p-4 sm:p-8 pt-28 sm:pt-36 pb-8 sm:pb-24">
     <NuxtPage/>
   </main>
   <Footer/>
@@ -16,6 +16,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    background: rgb(24, 24, 27);
   }
 
   * {
@@ -25,6 +26,7 @@
 
   body {
     color: white;
+    background: rgb(24, 24, 27);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-width: 320px;
