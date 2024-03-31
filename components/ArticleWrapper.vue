@@ -24,7 +24,7 @@ const showArchiveButton = () => {
         v-for="post in posts"
         :key="post._path"
         @click.exact="redirectToArticle(post.slug)"
-        class="group select-none w-full bg-zinc-800 rounded-lg overflow-hidden transition-all duration-1000 hover:bg-gradient-to-tr hover:from-indigo-500/20 hover:via-zinc-800 hover:to-zinc-800 drop-shadow-sm"
+        class="group select-none w-full h-full bg-zinc-800 rounded-lg overflow-hidden transition-all duration-1000 hover:bg-gradient-to-tr hover:from-indigo-500/20 hover:via-zinc-800 hover:to-zinc-800 drop-shadow-sm"
       >
         <div class="relative w-full max-h-40 overflow-hidden">
           <Image :src="post.thumbnail" :alt="post.title" :colored="false" class="group-hover:scale-105 transition-all duration-300"/>
