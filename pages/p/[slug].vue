@@ -72,9 +72,9 @@ if (post && post.value && post.value.title) {
     <div class="w-full border-t border-zinc-800 py-2">
       <span class="text-sm font-light text-zinc-500 select-none">TAGS:</span>
       <div class="mt-1 flex flex-row space-x-2">
-        <span v-for="tag in post.tags" :key="tag" class="text-sm px-2 py-1 text-indigo-500 bg-zinc-950 rounded-sm hover:text-indigo-400 select-none">
+        <NuxtLink v-for="tag in post.tags" :to="`/archive?search=${tag}`" :key="tag" class="text-sm px-2 py-1 text-indigo-500 bg-zinc-950 rounded-sm hover:text-indigo-400 select-none">
           {{ tag }}
-        </span>
+        </NuxtLink>
       </div>
     </div>
     <ReadAlso :slug="slug"></ReadAlso>
