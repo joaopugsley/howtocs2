@@ -1,5 +1,5 @@
 <script setup lang="js">
-import { onMounted, onUnmounted } from 'vue';
+  import { onMounted, onUnmounted } from 'vue';
 
   useHead({
     title: "Arquivo de Notícias",
@@ -36,7 +36,9 @@ import { onMounted, onUnmounted } from 'vue';
     router.push("/p/" + slug);
   }
 
-  const currentSearch = ref('');
+  const { search: searchQuery } = useRoute().query;
+
+  const currentSearch = ref(searchQuery || '');
   const searchDebounce = ref(null);
 
   const pagePosts = 18;
@@ -78,6 +80,9 @@ import { onMounted, onUnmounted } from 'vue';
 
   onMounted(() => {
     window.addEventListener("scroll", handleScroll);
+    if (currentSearch.value !== '') {
+      searchPosts();
+    }
   })
 
   onUnmounted(() => {
