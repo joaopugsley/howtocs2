@@ -1,7 +1,7 @@
 ---
 title: "paiN ultrapassa FURIA no ranking do HLTV"
 author: "@nityx64"
-date: 2024-03-26
+date: 2024-04-01
 draft: false
 tags: ["paiN", "Furia", "Brasil", "HLTV"]
 thumbnail: "/img/pain-gaming-major-copenhagen.jpg"
