@@ -10,6 +10,7 @@
     description?: string,
     date?: string,
   }
+  
   const { slug, title, thumbnail, alt, description, date } = defineProps<ArticleProps>();
 </script>
 

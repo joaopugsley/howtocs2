@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const { slug } = defineProps({
-  slug: {
-    type: String,
-    required: true,
-  }
-});
+  const { slug } = defineProps({
+    slug: {
+      type: String,
+      required: true,
+    }
+  });
 
-const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false, slug: { $ne: slug } }).sort({ id: -1, $numeric: true }).limit(3).find());
+  const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false, slug: { $ne: slug } }).sort({ id: -1, $numeric: true }).limit(3).find());
 </script>
 
 <template>

@@ -1,19 +1,24 @@
 <script setup lang="ts">
-const maxRecentlyPosts = 6;
+  import type { ParsedContent } from '@nuxt/content/types';
 
-const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1, $numeric: true }).skip(1).limit(maxRecentlyPosts).find());
+  export interface ArticleWrapperProps {
+    articles: ParsedContent[],
+    maxRecentlyArticles: Number,
+  }
 
-const showArchiveButton = () => {
-  return posts.value?.length === maxRecentlyPosts;
-}
+  const { articles, maxRecentlyArticles } = defineProps<ArticleWrapperProps>();
+
+  const showArchiveButton = () => {
+    return articles.length === maxRecentlyArticles;
+  };
 </script>
 
 <template>
-  <div v-if="posts" class="relative w-full h-fit flex flex-col space-y-2 md:space-y-4">
+  <div class="relative w-full h-fit flex flex-col space-y-2 md:space-y-4">
     <h3 class="text-sm font-bold text-indigo-400">MAIS RECENTES:</h3>
     <div class="relative w-full h-full grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
       <Article 
-        v-for="post in posts" 
+        v-for="post in articles" 
         :key="post._path" 
         :slug="post.slug" 
         :title="post.title"

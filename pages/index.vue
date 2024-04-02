@@ -37,11 +37,15 @@ useHead({
     }
   ]
 });
+
+const maxRecentlyArticles = 6; // the number of posts after the main article
+const { data: last_posts } = await useAsyncData('last_posts_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1, $numeric: true }).limit(maxRecentlyArticles + 1).find());
+
 </script>
 
 <template>
   <section class="w-full xl:w-3/5 flex flex-col space-y-4 md:space-y-8">
-    <MainArticle/>
-    <ArticleWrapper/>
+    <MainArticle v-if="last_posts && last_posts[0]" :article="last_posts[0]"/>
+    <ArticleWrapper v-if="last_posts && last_posts.length > 0" :articles="last_posts.slice(1)" :max-recently-articles="maxRecentlyArticles"/>
   </section>
 </template>
