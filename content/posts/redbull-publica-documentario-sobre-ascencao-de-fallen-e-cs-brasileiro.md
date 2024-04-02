@@ -4,7 +4,7 @@ author: "@nityx64"
 date: 2024-03-27
 draft: false
 tags: ["Fallen", "Red Bull Gaming"]
-thumbnail: "/img/fallen-mlg-aspen.jpg"
+thumbnail: "/img/thumbnails/fallen-mlg-aspen.jpg"
 thumbnail_alt: "Reprodução/HLTV"
 slug: redbull-publica-documentario-sobre-ascencao-de-fallen-e-cs-brasileiro
 id: 5

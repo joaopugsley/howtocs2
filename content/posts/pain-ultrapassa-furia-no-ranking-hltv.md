@@ -4,7 +4,7 @@ author: "@nityx64"
 date: 2024-04-01
 draft: false
 tags: ["paiN", "Furia", "Brasil", "HLTV"]
-thumbnail: "/img/pain-gaming-major-copenhagen.jpg"
+thumbnail: "/img/thumbnails/pain-gaming-major-copenhagen.jpg"
 thumbnail_alt: "Reprodução/HLTV"
 slug: pain-ultrapassa-furia-no-ranking-hltv
 id: 9

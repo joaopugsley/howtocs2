@@ -4,7 +4,7 @@ author: "@nityx64"
 date: 2024-03-26
 draft: false
 tags: ["Brasil", "HLTV"]
-thumbnail: "/img/furia-hltv.jpg"
+thumbnail: "/img/thumbnails/furia-hltv.jpg"
 thumbnail_alt: "Reprodução/HLTV"
 slug: brasil-no-topo-da-tabela-da-hltv
 id: 1

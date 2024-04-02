@@ -4,7 +4,7 @@ author: "@nityx64"
 date: 2024-03-28
 draft: false
 tags: ["FaZe", "Spirit", "Major", "Semifinais", "Donk"]
-thumbnail: "/img/sad-donk.webp"
+thumbnail: "/img/thumbnails/sad-donk.webp"
 thumbnail_alt: "Reprodução/ESL"
 slug: faze-vence-spirit-e-se-classifica-para-semifinais-do-primeiro-major-de-cs2
 id: 6

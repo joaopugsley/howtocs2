@@ -4,7 +4,7 @@ author: "@nityx64"
 date: 2024-03-26
 draft: false
 tags: ["Stewie2K", "Legacy"]
-thumbnail: "/img/stewie2k-coldzera.jpg"
+thumbnail: "/img/thumbnails/stewie2k-coldzera.jpg"
 thumbnail_alt: "Reprodução/HLTV"
 slug: stewie2k-fara-parte-da-legacy-em-proximos-campeonatos
 id: 2

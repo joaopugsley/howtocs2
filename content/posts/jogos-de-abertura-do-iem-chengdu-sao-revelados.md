@@ -4,7 +4,7 @@ author: "@nityx64"
 date: 2024-03-26
 draft: false
 tags: ["IEM Chengdu", "China"]
-thumbnail: "/img/iem-chengdu.jpg"
+thumbnail: "/img/thumbnails/iem-chengdu.jpg"
 slug: jogos-de-abertura-do-iem-chengdu-sao-revelados
 id: 4
 ---

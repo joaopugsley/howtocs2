@@ -4,7 +4,7 @@ author: "@nityx64"
 date: 2024-03-31
 draft: false
 tags: ["NAVI", "FaZe", "Major", "Finais", "S1mple"]
-thumbnail: "/img/navi-major-copenhagen-winner.png"
+thumbnail: "/img/thumbnails/navi-major-copenhagen-winner.png"
 thumbnail_alt: "Reprodução/HLTV"
 slug: navi-conquista-primeiro-major-de-cs2
 id: 8
