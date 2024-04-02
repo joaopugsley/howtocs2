@@ -2,7 +2,7 @@
   import formatPostDate from '~/utils/format-post-date';
   import redirectToArticle from '~/utils/redirect-to-article';
 
-  export type ArticleProps = {
+  export interface ArticleProps {
     slug: string,
     title?: string,
     thumbnail?: string,
