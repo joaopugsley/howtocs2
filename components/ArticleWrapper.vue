@@ -37,7 +37,7 @@ const showArchiveButton = () => {
       </article>
     </div>
     <div v-if="showArchiveButton()" class="w-full flex flex-row-reverse">
-      <NuxtLink to="/archive" class="px-3 py-1 rounded-md bg-zinc-800 hover:bg-zinc-850 text-md font-bold text-white select-none">
+      <NuxtLink to="/archive" class="w-full text-center sm:w-fit px-3 py-1 rounded-md bg-zinc-800 hover:bg-zinc-850 text-md font-bold text-white select-none">
         Ver mais
       </NuxtLink>
     </div>
