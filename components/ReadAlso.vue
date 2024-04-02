@@ -14,7 +14,7 @@ const { slug } = defineProps({
   }
 });
 
-const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false, slug: { $ne: slug } }).sort({ id: -1 }).limit(3).find());
+const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false, slug: { $ne: slug } }).sort({ id: -1, $numeric: true }).limit(3).find());
 </script>
 
 <template>

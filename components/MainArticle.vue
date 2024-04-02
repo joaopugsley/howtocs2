@@ -7,7 +7,7 @@ const redirectToArticle = (slug: string) => {
   router.push("/p/" + slug);
 }
 
-const { data: last_post } = await useAsyncData('last_post_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1 }).limit(1).findOne());
+const { data: last_post } = await useAsyncData('last_post_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1, $numeric: true }).limit(1).findOne());
 </script>
 
 <template>

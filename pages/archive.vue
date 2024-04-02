@@ -41,10 +41,10 @@ import { onMounted, onUnmounted } from 'vue';
 
   const pagePosts = 18;
 
-  const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1 }).limit(pagePosts).find());
+  const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1, $numeric: true }).limit(pagePosts).find());
 
   const searchPosts = async () => {
-    const newPosts = await queryContent('posts').where({ draft: false }).sort({ id: -1 }).find();
+    const newPosts = await queryContent('posts').where({ draft: false }).sort({ id: -1, $numeric: true }).find();
     const filteredPosts = newPosts.filter(
       allPosts => currentSearch.value === '' // empty search
       || allPosts.title.toLowerCase().includes(currentSearch.value.toLowerCase()) // title contains search content
@@ -65,7 +65,7 @@ import { onMounted, onUnmounted } from 'vue';
     if (currentSearch.value === '') return;
     const currentPosts = posts.value;
     const lastPostId = currentPosts[currentPosts.length - 1].id;
-    const newPosts = await queryContent('posts').where({ draft: false, id: { $lt: lastPostId } }).sort({ id: -1 }).limit(pagePosts).find();
+    const newPosts = await queryContent('posts').where({ draft: false, id: { $lt: lastPostId } }).sort({ id: -1, $numeric: true }).limit(pagePosts).find();
     posts.value = [...currentPosts, ...newPosts];
   }
 

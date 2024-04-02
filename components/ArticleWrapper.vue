@@ -9,7 +9,7 @@ const redirectToArticle = (slug: string) => {
 
 const maxRecentlyPosts = 6;
 
-const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1 }).skip(1).limit(maxRecentlyPosts).find());
+const { data: posts } = await useAsyncData('posts_data', () => queryContent('posts').where({ draft: false }).sort({ id: -1, $numeric: true }).skip(1).limit(maxRecentlyPosts).find());
 
 const showArchiveButton = () => {
   return posts.value?.length === maxRecentlyPosts;
