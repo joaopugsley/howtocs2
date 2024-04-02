@@ -44,8 +44,16 @@ const { data: last_posts } = await useAsyncData('last_posts_data', () => queryCo
 </script>
 
 <template>
-  <section class="w-full xl:w-3/5 flex flex-col space-y-4 md:space-y-8">
+  <div class="w-full xl:w-3/5 flex flex-col space-y-4 md:space-y-8">
     <MainArticle v-if="last_posts && last_posts[0]" :article="last_posts[0]"/>
-    <ArticleWrapper v-if="last_posts && last_posts.length > 0" :articles="last_posts.slice(1)" :max-recently-articles="maxRecentlyArticles"/>
-  </section>
+    <section v-if="last_posts && last_posts.length > 0" class="relative w-full h-fit flex flex-col space-y-2 md:space-y-4">
+      <h3 class="text-sm font-bold text-indigo-400">MAIS RECENTES:</h3>
+      <ArticleWrapper :articles="last_posts.slice(1)"/>
+      <div v-if="last_posts.length > maxRecentlyArticles" class="w-full flex flex-row-reverse">
+        <NuxtLink to="/archive" class="w-full text-center sm:w-fit px-3 py-1 rounded-md bg-zinc-800 hover:bg-zinc-850 text-md font-bold text-white select-none">
+          Ver mais
+        </NuxtLink>
+      </div>
+    </section>
+  </div>
 </template>
