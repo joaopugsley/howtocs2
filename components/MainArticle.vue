@@ -16,7 +16,12 @@
     class="group select-none w-full h-fit bg-zinc-800 rounded-lg overflow-hidden transition-all duration-150 hover:bg-gradient-to-tr hover:from-indigo-500/20 hover:via-zinc-800 hover:to-zinc-800 drop-shadow-sm"
   >
     <div class="relative w-full max-h-96 overflow-hidden">
-      <Image :src="article.thumbnail" :alt="article.thumbnail_alt" :colored="false" class="group-hover:scale-105 transition-all duration-300"/>
+      <NuxtImg 
+        :src="article.thumbnail" 
+        :alt="article.thumbnail_alt || article.title" 
+        format="webp" 
+        class="w-full object-cover group-hover:scale-105 transition-all duration-300"
+      />
       <span class="absolute right-2 bottom-2 text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ formatPostDate(article.date) }}</span>
     </div>
     <div class="w-full p-4 space-y-2">

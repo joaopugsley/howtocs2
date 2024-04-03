@@ -56,7 +56,12 @@ if (post && post.value && post.value.title) {
     class="w-full lg:w-3/5 flex flex-col space-y-4 md:space-y-8"
   >
     <div class="relative w-full max-h-96 overflow-hidden rounded-lg">
-      <Image :src="post.thumbnail" :alt="post.thumbnail_alt || post.title"/>
+      <NuxtImg 
+        :src="post.thumbnail" 
+        :alt="post.thumbnail_alt || post.title" 
+        format="webp" 
+        class="w-full object-cover"
+      />
       <div class="absolute right-2 bottom-2 flex flex-col xs:flex-row justify-center items-end space-x-0 xs:space-x-2 space-y-2 xs:space-y-0">
         <span v-if="post.thumbnail_alt" class="text-xs sm:text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold select-all"><span class="select-none">Foto: </span>{{ post.thumbnail_alt }}</span>
         <span v-if="post.author" class="text-xs sm:text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold select-all"><span class="select-none">Escrito por: </span>{{ post.author }}</span>
