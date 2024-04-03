@@ -23,7 +23,7 @@
       <Image 
         v-if="thumbnail"
         :src="thumbnail" 
-        :alt="alt" 
+        :alt="alt || title" 
         :colored="false" 
         class="group-hover:scale-105 transition-all duration-300"
       />
