@@ -23,6 +23,8 @@
       <NuxtImg 
         :src="thumbnail"
         :alt="alt || title" 
+        width="480px"
+        height="270px"
         format="webp" 
         class="w-full object-cover group-hover:scale-105 transition-all duration-300" 
         placeholder

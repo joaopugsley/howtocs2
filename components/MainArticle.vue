@@ -19,6 +19,8 @@
       <NuxtImg 
         :src="article.thumbnail" 
         :alt="article.thumbnail_alt || article.title" 
+        width="1280px"
+        height="720px"
         format="webp" 
         class="w-full object-cover group-hover:scale-105 transition-all duration-300"
         placeholder
