@@ -1,11 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "nuxt-icon", "@nuxt/image"],
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
     }
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "nuxt-icon"],
+  image: {
+    format: ['webp'],
+  },
   content: {},
+  devtools: { enabled: false },
 });
