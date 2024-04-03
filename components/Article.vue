@@ -23,8 +23,9 @@
       <NuxtImg 
         :src="thumbnail"
         :alt="alt || title" 
-        format="webp"
-        class="w-full object-cover group-hover:scale-105 transition-all duration-300"
+        format="webp" 
+        class="w-full object-cover group-hover:scale-105 transition-all duration-300" 
+        placeholder
       />
       <span v-if="date" class="absolute right-2 bottom-2 text-sm px-2 py-1 text-indigo-400 bg-zinc-900 rounded-md font-bold">{{ formatPostDate(date) }}</span>
     </div>
